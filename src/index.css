@@ -1,1 +1,41 @@
 @import "tailwindcss";
+
+@theme {
+  /* fonts */
+  --font-primary: "Roboto", "serif";
+
+  /* colors */
+
+  --color-primaryText: #115c86;
+  --color-primaryBlue: #0057ff;
+  --color-secondGreen: #0b1c26;
+  --color-secondWhiteText: #e6f3fb;
+
+  /* to make Gradient in ezy way -> use this
+
+  i.e :-
+  " bg-gradient-to-b from-periwinkleBlue to-aliceBlue"
+
+  
+  */
+
+  /* Popup background Gradient colors */
+  --color-periwinkleBlue: #c4cef2;
+  --color-aliceBlue: #f3f6fb;
+
+  /* Second Background Gradient colors */
+  --color-lightPowderBlue: #e3eef4;
+  --color-babyBlue: #c0d8f0;
+
+  /* Third Background Gradient colors  */
+  --color-lightLavenderGray: #d9d8de;
+  --color-white: #ffffff;
+
+  /* 4th gradient color merging with 
+  
+    --color-aliceBlue: #f3f6fb;
+
+  
+  */
+  --color-lightSkyBlue: #c4e7f2;
+}
