@@ -7,10 +7,12 @@ const Button = ({
   bgColor, 
   borderColor, 
   iconBgColor, 
-  borderRadius 
+  borderRadius,
+  onClick 
 }) => {
   return (
     <motion.button
+      onClick={onClick}
       whileTap={{ 
         scale: 0.95, 
         transition: { duration: 0.1 } 
@@ -19,7 +21,7 @@ const Button = ({
         scale: 1.05,
         transition: { duration: 0.2 }
       }}
-      className={`flex items-center px-10 p-0.5 border cursor-pointer text-white font-bold xl:text-xl lg:text-[12px] md:text-[12px]`} 
+      className={`flex items-center justify-center px-10 p-0.5 border cursor-pointer text-white font-bold xl:text-xl lg:text-[20px] md:text-[20px]`} 
       style={{ 
         backgroundColor: bgColor, 
         borderColor: borderColor, 
@@ -27,16 +29,16 @@ const Button = ({
         borderRadius: borderRadius 
       }}
     >
+      {name}
       {icon && (
         <motion.span 
           whileTap={{ rotate: 15 }}
-          className="p-2 rounded-full mr-2"
+          className="p-2 rounded-full ml-2"
           style={{ backgroundColor: iconBgColor }}
         >
           {icon}
         </motion.span>
       )}
-      {name}
     </motion.button>
   );
 };
