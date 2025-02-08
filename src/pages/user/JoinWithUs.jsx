@@ -8,6 +8,8 @@ import Button from "../../components/Button";
 
 // and need correct routes
 
+//testing file error case
+
 const JoinWithUs = () => {
   const navigate = useNavigate();
 
