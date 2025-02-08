@@ -4,10 +4,16 @@ import { motion } from 'framer-motion';
 const Button = ({ 
   name, 
   icon, 
-  bgColor, 
+  bgColor,
+  width, 
   borderColor, 
   iconBgColor, 
+  fontColor,
   borderRadius,
+  fontWeight,
+  fontSize,
+  paddingTop,
+  paddingBottom,
   onClick 
 }) => {
   return (
@@ -21,12 +27,18 @@ const Button = ({
         scale: 1.05,
         transition: { duration: 0.2 }
       }}
-      className={`flex items-center justify-center px-10 p-0.5 border cursor-pointer text-white font-bold xl:text-xl lg:text-[20px] md:text-[20px]`} 
+      className={`flex items-center justify-center px-10 p-0.5 border cursor-pointer text-white font-bold xl:text-xl lg:text-[20px] md:text-[20px] w-full`} 
       style={{ 
-        backgroundColor: bgColor, 
+        backgroundColor: bgColor,
+        width:width,
+        color: fontColor, 
         borderColor: borderColor, 
         borderWidth: '2px', 
-        borderRadius: borderRadius 
+        borderRadius: borderRadius ,
+        fontWeight: fontWeight,
+        fontSize:fontSize,
+        paddingTop:paddingTop,
+        paddingBottom:paddingBottom,
       }}
     >
       {name}

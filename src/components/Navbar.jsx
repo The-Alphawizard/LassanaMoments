@@ -10,13 +10,19 @@ import {
 import { FaBars, FaTimes } from "react-icons/fa";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import Button from "./Button";
+import { useUser } from '../context/UserContext';
 
 const Navbar = () => {
+
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
-  const [showProfile, setShowProfile] = useState(false);
+  // const [showProfile, setShowProfile] = useState(false);
+  const { userDetails } = useUser();
+
+
+  const showProfile = userDetails.isAuthenticated || (userDetails.firstname && userDetails.lastname);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -34,21 +40,25 @@ const Navbar = () => {
     setShowProfile(!showProfile);
   };
 
+  const handleSeeMore = () => {
+    navigate("/JoinwithUS");
+  };
+
   const scrollToSection = (href) => {
     // Close mobile menu and search
     setIsMobileMenuOpen(false);
     setIsMobileSearchOpen(false);
 
     // If not on landing page, navigate to landing page with hash
-    if (window.location.pathname !== '/') {
+    if (window.location.pathname !== "/") {
       navigate(`/#${href}`);
     } else {
       // Direct scroll on landing page
       const element = document.getElementById(href);
       if (element) {
-        element.scrollIntoView({ 
-          behavior: 'smooth',
-          block: 'start' 
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
         });
       }
     }
@@ -156,21 +166,33 @@ const Navbar = () => {
                   borderColor="#0057ff"
                   iconBgColor="white"
                   borderRadius="10px"
-                  onClick={toggleProfile}
+                  onClick={handleSeeMore}
                 />
               ) : (
+                // user details part
                 <motion.div
                   className="flex items-center justify-center gap-3"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                 >
-                  <div>
-                    <img src="https://placehold.co/40x40/png" alt="User" />
+                  <div className="w-10 h-10 rounded-full overflow-hidden">
+                    <img
+                      src={
+                        userDetails.profileImage ||
+                        "https://placehold.co/40x40/png"
+                      }
+                      alt="User"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div>
-                    <h1 className="text-[15px] font-bold">Mall Gamage</h1>
-                    <p className="text-[10px] font-bold">@mallgamage</p>
+                    <h1 className="text-[15px] font-bold">
+                      {userDetails.firstname} {userDetails.lastname}
+                    </h1>
+                    <p className="text-[10px] font-bold">
+                      @{userDetails.username}
+                    </p>
                   </div>
                   <motion.button whileTap={{ scale: 0.8 }} className="text-xl">
                     <BsThreeDotsVertical />

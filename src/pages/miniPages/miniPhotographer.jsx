@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 import { PiMapPinAreaBold } from "react-icons/pi";
 import { FaRegCircleCheck, FaCircleChevronRight } from "react-icons/fa6";
@@ -101,14 +101,14 @@ const MiniPhotographer = () => {
   };
 
   const handleSeeMore = () => {
-    navigate('/photographers');
+    navigate("/photographers");
   };
 
   return (
     <div id="miniPhotographer" className="min-h-screen bg-white">
       <header className="bg-white py-8">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center mb-4 text-primaryText">
+          <h1 className="text-4xl font-bold text-center mb-4 text-primaryText mt-15">
             Capture Moments That Matter
           </h1>
           <h1 className="text-4xl font-bold text-center mb-4 text-primaryText">
@@ -138,6 +138,7 @@ const MiniPhotographer = () => {
             name="See more"
             icon={<FaCircleChevronRight />}
             bgColor="#0057ff"
+            width="250px"
             borderColor="#0057ff"
             iconBgColor=""
             borderRadius="20px"
