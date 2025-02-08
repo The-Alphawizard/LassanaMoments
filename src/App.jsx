@@ -12,7 +12,8 @@ import GalleryMain from "./pages/Main/galleryMain/galleryMain";
 
 
 //entering Login Or Sign Up
-import JoinwithUS from "./pages/user/JoinwithUS";
+
+import JoinwithUs from "./pages/user/JoinWithUs";
 
 // User side Login
 import UserLoginPage1 from "./pages/user/userLoginPage1";
@@ -43,7 +44,7 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/JoinwithUS" element={<JoinwithUS />} />
+            <Route path="/JoinwithUS" element={<JoinwithUs />} />
 
             {/* Sign Up pages */}
             <Route path="/UserSignUp1" element={<UserSignUp1 />} />
