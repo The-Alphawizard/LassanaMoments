@@ -7,8 +7,6 @@ import MiniPhotographer from "./miniPages/miniPhotographer";
 import MiniFindPhotographer from "./miniPages/miniFindPhotographer";
 import MiniReview from "./miniPages/miniReview";
 import Footer from "../components/Footer";
-import UserLoginPage2 from "./user/userLoginPage2";
-
 const LandingPage = () => {
   return (
     <div className="w-full h-auto">
@@ -20,7 +18,6 @@ const LandingPage = () => {
       <MiniFindPhotographer/>
       <MiniReview/>
 
-      <UserLoginPage2/>
       <Footer/>
 
     </div>

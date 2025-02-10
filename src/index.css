@@ -1,19 +1,16 @@
 @import "tailwindcss";
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* * {
   font-family: "Poppins", sans-serif;
 }  */
 
-
-
-html{
+html {
   scroll-behavior: smooth;
 }
 
 @theme {
-
   /* colors */
 
   --color-primaryText: #115c86;
@@ -48,4 +45,31 @@ html{
   
   */
   --color-lightSkyBlue: #c4e7f2;
+}
+
+/* Add these CSS variables to your root styles */
+:root {
+  --color-aliceBlue: #f0f8ff;
+  --color-periwinkleBlue: #ccccff;
+  --color-primaryText: #333333;
+}
+
+/* Additional utility classes if needed */
+.hover-transition {
+  transition: all 0.2s ease-in-out;
+}
+
+.drag-area {
+  transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+/* Optional: Add responsive styles */
+@media (max-width: 640px) {
+  .testimonial-text {
+    font-size: 12px;
+  }
+
+  .upload-area {
+    padding: 1rem;
+  }
 }

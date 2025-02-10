@@ -15,7 +15,7 @@ const JoinWithUs = () => {
 
   const handleRoutePages = () => {
     if (selectedOption === "photographer") {
-      navigate("/PhotographerLogin1");
+      navigate("/PhotographerSignUp1");
     } else {
       navigate("/UserSignUp1");
     }

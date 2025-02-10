@@ -5,11 +5,9 @@ import Background from "./components/Background";
 import Navbar from "./components/Navbar";
 import LandingPage from "./pages/LandingPage";
 
-
 //Main pages
 import PhotographerMain from "./pages/Main/photographerMain";
 import GalleryMain from "./pages/Main/galleryMain/galleryMain";
-
 
 //entering Login Or Sign Up
 
@@ -28,8 +26,20 @@ import UserSignUp2 from "./pages/user/UserSignUp2";
 import UserSignUp3 from "./pages/user/UserSignUp3";
 import UserSignUp4 from "./pages/user/UserSignUp4";
 
-//Photographer
-import PhotographerLogin1 from "./pages/photographer/photographerLogin1";
+//Photographer Sign Up
+import PhotographerSignUp1 from "./pages/photographer/PhotographerSignUp1";
+import PhotographerSignUp2 from "./pages/photographer/PhotographerSignUp2";
+import PhotographerSignUp3 from "./pages/photographer/PhotographerSignUp3";
+import PhotographerSignUp4 from "./pages/photographer/PhotographerSignUp4";
+import PhotographerSignUp5 from "./pages/photographer/PhotographerSignUp5";
+
+//Photographer Log in
+
+import PhotographerLoginPage1 from "./pages/photographer/PhotographerLoginPage1";
+import PhotographerLoginPage2 from "./pages/photographer/PhotographerLoginPage2";
+import PhotographerLoginPage3 from "./pages/photographer/PhotographerLoginPage3";
+import PhotographerLoginPage4 from "./pages/photographer/PhotographerLoginPage4";
+import PhotographerLoginPage5 from "./pages/photographer/PhotographerLoginPage5";
 
 // Import UserContext Provider
 import { UserProvider } from "./context/UserContext";
@@ -46,12 +56,58 @@ const App = () => {
             <Route path="/" element={<LandingPage />} />
             <Route path="/JoinwithUS" element={<JoinwithUs />} />
 
-            {/* Sign Up pages */}
+            {/*User Sign Up pages */}
             <Route path="/UserSignUp1" element={<UserSignUp1 />} />
             <Route path="/UserSignUp2" element={<UserSignUp2 />} />
             <Route path="/UserSignUp3" element={<UserSignUp3 />} />
             <Route path="/UserSignUp4" element={<UserSignUp4 />} />
-            {/* Login Pages */}
+
+            {/* Photographer Sign Up */}
+            <Route
+              path="/PhotographerSignUp1"
+              element={<PhotographerSignUp1 />}
+            />
+            <Route
+              path="/PhotographerSignUp2"
+              element={<PhotographerSignUp2 />}
+            />
+            <Route
+              path="/PhotographerSignUp3"
+              element={<PhotographerSignUp3 />}
+            />
+            <Route
+              path="/PhotographerSignUp4"
+              element={<PhotographerSignUp4 />}
+            />
+            <Route
+              path="/PhotographerSignUp5"
+              element={<PhotographerSignUp5 />}
+            />
+
+            {/* Photographer login */}
+            <Route
+              path="/PhotographerLoginPage1"
+              element={<PhotographerLoginPage1 />}
+            />
+            <Route
+              path="/PhotographerLoginPage2"
+              element={<PhotographerLoginPage2 />}
+            />
+            <Route
+              path="/PhotographerLoginPage3"
+              element={<PhotographerLoginPage3 />}
+            />
+            <Route
+              path="/PhotographerLoginPage4"
+              element={<PhotographerLoginPage4 />}
+            />
+            <Route
+              path="/PhotographerLoginPage5"
+              element={<PhotographerLoginPage5 />}
+            />
+
+            {/*User Login Pages */}
+
             <Route path="/UserLoginPage1" element={<UserLoginPage1 />} />
             <Route path="/UserLoginPage2" element={<UserLoginPage2 />} />
             <Route path="/UserLoginPage3" element={<UserLoginPage3 />} />
@@ -61,7 +117,6 @@ const App = () => {
             {/* Main Pages within Mini sections */}
             <Route path="/photographers" element={<PhotographerMain />} />
             <Route path="/gallery" element={<GalleryMain />} />
-
           </Routes>
         </div>
       </Router>

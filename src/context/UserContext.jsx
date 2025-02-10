@@ -9,13 +9,31 @@ export const UserProvider = ({ children }) => {
     email: '',
     username: '',
     profileImage: null,
-    isAuthenticated: false
+    isAuthenticated: false,
+    userType: '', // 'user' or 'photographer'
+    // Photographer specific fields
+    about: '',
+    phone: '',
+    country: '',
+    district: '',
+    division: '',
+    address: '',
   });
 
   const updateUserDetails = (details) => {
     setUserDetails(prev => ({
       ...prev,
       ...details
+    }));
+  };
+
+  // Specific method for updating photographer details
+  const updatePhotographerDetails = (photographerData) => {
+    setUserDetails(prev => ({
+      ...prev,
+      ...photographerData,
+      userType: 'photographer',
+      isAuthenticated: true // Set to true when photographer signup is complete
     }));
   };
 
@@ -26,7 +44,14 @@ export const UserProvider = ({ children }) => {
       email: '',
       username: '',
       profileImage: null,
-      isAuthenticated: false
+      isAuthenticated: false,
+      userType: '',
+      about: '',
+      phone: '',
+      country: '',
+      district: '',
+      division: '',
+      address: '',
     });
   };
 
@@ -34,6 +59,7 @@ export const UserProvider = ({ children }) => {
     <UserContext.Provider value={{ 
       userDetails, 
       updateUserDetails,
+      updatePhotographerDetails,
       clearUserDetails
     }}>
       {children}
@@ -41,7 +67,6 @@ export const UserProvider = ({ children }) => {
   );
 };
 
-// Custom hook to use the user context
 export const useUser = () => {
   const context = useContext(UserContext);
   if (context === undefined) {
