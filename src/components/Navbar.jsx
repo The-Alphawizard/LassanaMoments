@@ -109,7 +109,7 @@ const Navbar = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 w-full z-50 ${
+      className={`fixed top-0 left-0 w-full z-50 font-['Poppins'] ${
         isDarkMode ? "bg-gray-900 text-white" : "bg-white text-black"
       } transition-colors duration-300 shadow-md`}
     >
@@ -132,7 +132,7 @@ const Navbar = () => {
                   key={link.name}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  className="cursor-pointer font-bold lg:text-[15px] xl:text-xl text-center"
+                  className="cursor-pointer  lg:text-[15px] xl:text-xl text-center"
                   onClick={() => scrollToSection(link.href)}
                 >
                   {link.name}

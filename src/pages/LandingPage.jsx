@@ -2,7 +2,7 @@ import React from "react";
 import Home from "./miniPages/Home";
 import MiniAboutUs from "./miniPages/miniAboutUs";
 import PhoneArea from "./miniPages/PhoneArea";
-import MiniGallery from "./miniPages/miniGallery";
+import MiniGallery from "./miniPages/miniGallery/miniGallery";
 import MiniPhotographer from "./miniPages/miniPhotographer";
 import MiniFindPhotographer from "./miniPages/miniFindPhotographer";
 import MiniReview from "./miniPages/miniReview";
@@ -14,12 +14,11 @@ const LandingPage = () => {
       <PhoneArea />
       <MiniAboutUs />
       <MiniGallery />
-      <MiniPhotographer/>
-      <MiniFindPhotographer/>
-      <MiniReview/>
+      <MiniPhotographer />
+      <MiniFindPhotographer />
+      <MiniReview />
 
-      <Footer/>
-
+      <Footer />
     </div>
   );
 };

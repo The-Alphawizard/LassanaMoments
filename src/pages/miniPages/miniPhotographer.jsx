@@ -14,7 +14,7 @@ const PhotographerCard = ({
   username,
   image,
 }) => (
-  <div className=" rounded-[35px] p-6 shadow-sm hover:shadow-md transition-shadow w-[240px] h-[350px] bg-gradient-to-b from-aliceBlue to-periwinkleBlue">
+  <div className="font-['Poppins'] rounded-[35px] p-6 shadow-sm hover:shadow-md transition-shadow w-[240px] h-[350px] bg-gradient-to-b from-aliceBlue to-blue-200">
     <div className="flex flex-col items-center space-y-2  h-full">
       <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-blue-100">
         <img
@@ -24,7 +24,7 @@ const PhotographerCard = ({
         />
       </div>
       <div className="flex items-center space-x-1">
-        <span className="font-medium text-gray-900">{name}</span>
+        <span className="font-medium text-[#115c86]">{name}</span>
         {verified && <FaRegCircleCheck className="text-green-600" />}
       </div>
       <div className="text-sm text-gray-500">@{username}</div>
@@ -105,13 +105,13 @@ const MiniPhotographer = () => {
   };
 
   return (
-    <div id="miniPhotographer" className="min-h-screen bg-white">
-      <header className="bg-white py-8">
+    <div  id="miniPhotographer" className="min-h-screen font-['Poppins']">
+      <header className=" py-8">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center mb-4 text-primaryText mt-15">
+          <h1 className="text-4xl font-bold text-center mb-4 text-[#115c86] mt-15">
             Capture Moments That Matter
           </h1>
-          <h1 className="text-4xl font-bold text-center mb-4 text-primaryText">
+          <h1 className="text-4xl font-bold text-center mb-4 text-[#115c86]">
             With The Best Photographers Near You
           </h1>
           <p className="text-center text-gray-600 max-w-2xl mx-auto">
