@@ -10,10 +10,10 @@ import {
 import { FaBars, FaTimes } from "react-icons/fa";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import Button from "./Button";
-import { useUser } from '../context/UserContext';
+import { useUser } from "../context/UserContext";
+import Logo from "../images/logo/LassanaMomentz logo transparent.png";
 
 const Navbar = () => {
-
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -21,8 +21,9 @@ const Navbar = () => {
   // const [showProfile, setShowProfile] = useState(false);
   const { userDetails } = useUser();
 
-
-  const showProfile = userDetails.isAuthenticated || (userDetails.firstname && userDetails.lastname);
+  const showProfile =
+    userDetails.isAuthenticated ||
+    (userDetails.firstname && userDetails.lastname);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -116,8 +117,13 @@ const Navbar = () => {
       {/* Desktop Navbar */}
       <div className="hidden md:grid md:grid-cols-1 lg:flex lg:items-center lg:justify-between px-8 pb-2 xl:gap-15 md:gap-5">
         {/* Logo Name */}
-        <div className="px-2">
-          <h1 className="text-2xl font-bold lg:text-[20px] xl:text-2xl">
+        <div className="px-2 flex flex-col md:flex-col lg:flex-row xl:flex-row items-center gap-2">
+          <img
+            src={Logo}
+            alt="LassanaMoments Logo"
+            className="w-auto h-auto max-h-[40px] object-contain transition-all duration-300"
+          />
+          <h1 className="text-2xl font-bold lg:text-[20px] xl:text-2xl text-center lg:text-left">
             LassanaMoments
           </h1>
         </div>
@@ -207,7 +213,18 @@ const Navbar = () => {
       {/* Mobile Navbar */}
       <div className="md:hidden">
         <div className="flex items-center justify-between p-4">
-          <h1 className="text-xl font-bold">LassanaMoments</h1>
+          <div className="flex items-center">
+            <img
+              src={Logo}
+              alt="LassanaMoments Logo"
+              className="w-auto h-auto
+                  max-h-[35px] sm:max-h-[40px]
+                  object-contain
+                  transition-all duration-300"
+            />
+
+            <h1 className="text-xl font-bold">LassanaMoments</h1>
+          </div>
 
           <div className="flex items-center space-x-4">
             <motion.button

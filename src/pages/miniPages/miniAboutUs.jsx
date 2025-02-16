@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
 import bg from "./../../images/AboutUs/1.jpeg";
 //transparent
-import logo from "./../../images/AboutUs/LassanaMomentz logo transparent.png";
+import logo from "../../images/logo/LassanaMomentz logo transparent.png";
 
 const AboutUs = () => {
   return (
-    <div 
+    <div id='aboutus'
       className="min-h-screen font-primary text-primaryText overflow-hidden" 
       style={{ fontFamily: "var(--font-primary)" }}
     >

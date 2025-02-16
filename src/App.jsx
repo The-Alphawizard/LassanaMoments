@@ -44,6 +44,18 @@ import PhotographerLoginPage5 from "./pages/photographer/PhotographerLoginPage5"
 // Import UserContext Provider
 import { UserProvider } from "./context/UserContext";
 
+// Dashboard Photographer side
+
+import PhotographerDash from "./pages/Main/Dashboard-photographer side/Dashboard-photographer side";
+
+// Dashboard User side
+import UserDash from "./pages/Main/Dashboard-user side/Dashboard-user side";
+
+
+
+//model component
+import EditProfile from "./pages/models/EditProfile"
+
 const App = () => {
   return (
     <UserProvider>
@@ -114,9 +126,19 @@ const App = () => {
             <Route path="/UserLoginPage4" element={<UserLoginPage4 />} />
             <Route path="/UserLoginPage5" element={<UserLoginPage5 />} />
 
+            {/* Dashboards  */}
+            <Route path="/photographerDash" element={<PhotographerDash />} />
+            <Route path="/UserDash" element={<UserDash />} />
+
             {/* Main Pages within Mini sections */}
             <Route path="/photographers" element={<PhotographerMain />} />
             <Route path="/gallery" element={<GalleryMain />} />
+
+            {/* models */}
+            <Route path="/EditProfile" element={<EditProfile />} />
+
+
+            {/* end of route component */}
           </Routes>
         </div>
       </Router>
